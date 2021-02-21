@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DraftBasic from "./DraftBasic";
+import styled from "styled-components";
+import DraftPlugin from "./DraftPlugin";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Draft.js練習用</h1>
+      <Wrap>
+        <DraftBasic />
+        <DraftPlugin />
+      </Wrap>
+    </>
   );
-}
+};
 
 export default App;
+
+const Wrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
