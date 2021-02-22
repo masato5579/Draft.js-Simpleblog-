@@ -18,12 +18,15 @@ const styleMap = {
 };
 
 const App = () => {
+  //useState
   const [editor, setEditor] = useState(EditorState.createEmpty());
 
+  //入力した文字がエディターに格納される
   const onChange = (editor) => {
     setEditor(editor);
   };
 
+  //contentBlockのTypeが"h1"だったらheader1というクラスを付与
   const myBlockStyleFn = (contentBlock) => {
     const type = contentBlock.getType();
     if (type === "h1") {
@@ -31,6 +34,7 @@ const App = () => {
     }
   };
 
+  //タグの登録
   const blockReanderMap = Immutable.Map({
     h1: {
       element: "h1",
@@ -40,22 +44,27 @@ const App = () => {
     },
   });
 
+  //タグの登録を反映
   const extendsBlockReaderMap = DefaultDraftBlockRenderMap.merge(
     blockReanderMap
   );
 
+  //クリックしたらfont-weight:bold;が適用される
   const _onBoldClick = () => {
     onChange(RichUtils.toggleInlineStyle(editor, "BOLD"));
   };
 
+  //クリックしたらtextDecoration: "line-through"が適用される
   const _onLineThrough = () => {
     onChange(RichUtils.toggleInlineStyle(editor, "INLINETHROUGH"));
   };
 
+  //クリックしたら”h1”になる
   const _h1 = () => {
     onChange(RichUtils.toggleBlockType(editor, "h1"));
   };
 
+  //クリックしたら"h2"になる
   const _h2 = () => {
     onChange(RichUtils.toggleBlockType(editor, "h2"));
   };

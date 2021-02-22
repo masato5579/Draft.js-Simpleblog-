@@ -1,7 +1,7 @@
 import React from "react";
 import DraftBasic from "./DraftBasic";
-import styled from "styled-components";
 import DraftPlugin from "./DraftPlugin";
+import styled from "styled-components";
 
 const App = () => {
   return (

@@ -6,11 +6,13 @@ export default class VideoAdd extends Component {
     url: "",
   };
 
+  //videoを追加
   addVideo = () => {
     const { editorState, onChange } = this.props;
     onChange(this.props.modifier(editorState, { src: this.state.url }));
   };
 
+  //urlの入力
   changeUrl = (evt) => {
     this.setState({ url: evt.target.value });
   };

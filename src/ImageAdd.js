@@ -12,7 +12,7 @@ export default class ImageAdd extends Component {
     onChange(this.props.modifier(editorState, this.state.url));
   };
 
-  //
+  //urlの入力
   changeUrl = (evt) => {
     this.setState({ url: evt.target.value });
   };

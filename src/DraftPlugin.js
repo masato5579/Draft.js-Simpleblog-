@@ -39,16 +39,16 @@ export default class CustomEditor extends Component {
     this.editor.focus();
   };
 
+  //エディターに入力した内容をsave
   save = () => {
     const contentState = this.state.editorState.getCurrentContent();
     const content = stateToHTML(contentState);
     const edit = document.querySelector(".edit");
-    const edit2 = edit.outerHTML;
+    const edit2 = edit.outerHTML; //htmlを文字列にする
     this.setState({ edit: edit2 });
   };
 
   render() {
-    console.log(this.state.edit);
     return (
       <Con>
         <h1>aaa</h1>
