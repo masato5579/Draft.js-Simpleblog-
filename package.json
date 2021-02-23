@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@draft-js-plugins/buttons": "^4.1.0",
     "@draft-js-plugins/editor": "^4.1.0",
     "@draft-js-plugins/image": "^4.1.0",
+    "@draft-js-plugins/inline-toolbar": "^4.1.0",
     "@draft-js-plugins/video": "^4.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,6 +17,7 @@
     "immutable": "^3.7.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^2.0.5",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
@@ -42,5 +45,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^4.5.0"
   }
 }

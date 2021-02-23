@@ -87,6 +87,4 @@ const Wrap = styled.div`
   height: 500px;
 `;
 
-const Con = styled.div`
-  width: 50%;
-`;
+const Con = styled.div``;

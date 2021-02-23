@@ -8,7 +8,7 @@ import {
 import "draft-js/dist/Draft.css";
 import styled from "styled-components";
 import Immutable from "immutable";
-import "./style.css";
+import "../style.css";
 
 //styleMap
 const styleMap = {
@@ -94,9 +94,7 @@ const App = () => {
 
 export default App;
 
-const Wrap = styled.div`
-  width: 40%;
-`;
+const Wrap = styled.div``;
 
 const Row = styled.div`
   background: #ccc;
